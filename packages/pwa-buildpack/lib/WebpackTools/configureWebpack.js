@@ -2,16 +2,28 @@ const { promisify } = require('util');
 const stat = promisify(require('fs').stat);
 const path = require('path');
 const webpack = require('webpack');
-const pkgDir = require('pkg-dir');
 const TerserPlugin = require('terser-webpack-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 const loadEnvironment = require('../Utilities/loadEnvironment');
+const ensurePackageRoot = require('../Utilities/ensurePackageRoot');
 const RootComponentsPlugin = require('./plugins/RootComponentsPlugin');
 const ServiceWorkerPlugin = require('./plugins/ServiceWorkerPlugin');
 const UpwardIncludePlugin = require('./plugins/UpwardIncludePlugin');
 const PWADevServer = require('./PWADevServer');
 const MagentoResolver = require('./MagentoResolver');
+
+async function fsHas(loc, test = () => true) {
+    try {
+        return test(await stat(loc));
+    } catch (e) {
+        return false;
+    }
+}
+
+async function isRealDirectory(loc) {
+    return fsHas(loc, stats => stats.isDirectory());
+}
 
 /**
  * We need a root directory for the app in order to build all paths relative to
@@ -31,20 +43,11 @@ async function validateRoot(appRoot) {
         );
     }
     // If root doesn't exist, an ENOENT will throw here and log to stderr.
-    const dirStat = await stat(appRoot);
-    if (!dirStat.isDirectory()) {
+    const rootIsValid = await isRealDirectory(appRoot);
+    if (!rootIsValid) {
         throw new Error(
             `Provided application root "${appRoot}" is not a directory.`
         );
-    }
-}
-
-async function checkForBabelConfig(appRoot) {
-    try {
-        await stat(path.resolve(appRoot, 'babel.config.js'));
-        return true;
-    } catch (e) {
-        return false;
     }
 }
 
@@ -65,7 +68,9 @@ function isDevServer() {
 async function configureWebpack({ context, vendor = [], special = {}, env }) {
     await validateRoot(context);
 
-    const babelConfigPresent = await checkForBabelConfig(context);
+    const babelConfigPresent = await fsHas(
+        path.resolve(context, 'babel.config.js')
+    );
 
     const projectConfig = loadEnvironment(context);
 
@@ -75,10 +80,13 @@ async function configureWebpack({ context, vendor = [], special = {}, env }) {
     };
 
     const features = await Promise.all(
-        Object.entries(special).map(async ([packageName, flags]) => [
-            await pkgDir(path.dirname(require.resolve(packageName))),
-            flags
-        ])
+        Object.entries(special).map(async ([packageName, flags]) => {
+            const depPath = path.resolve(context, packageName);
+            if (await isRealDirectory(depPath)) {
+                return [depPath, flags];
+            }
+            return [await ensurePackageRoot(packageName), flags];
+        })
     );
 
     const hasFlag = flag =>
