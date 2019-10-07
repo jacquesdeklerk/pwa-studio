@@ -55,7 +55,7 @@ test('locates builtin package', async () => {
     await expect(
         createProjectCliBuilder.handler({
             name: 'goo',
-            template: 'venia-concept',
+            template: '@magento/venia-concept',
             directory: '/project'
         })
     ).resolves.not.toThrow();
@@ -201,7 +201,7 @@ test('warns if backendurl does not match env', async () => {
         createProjectCliBuilder.handler({
             backendUrl: 'https://example.com',
             name: 'goo',
-            template: 'venia-concept',
+            template: '@magento/venia-concept',
             directory: '/project',
             npmClient: 'yarn'
         })
@@ -219,7 +219,7 @@ test('runs install', async () => {
     await expect(
         createProjectCliBuilder.handler({
             name: 'goo',
-            template: 'venia-concept',
+            template: '@magento/venia-concept',
             directory: process.cwd(),
             install: true,
             npmClient: 'yarn'

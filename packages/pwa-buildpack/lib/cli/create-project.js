@@ -31,7 +31,7 @@ module.exports.builder = yargs =>
         .options({
             template: {
                 describe:
-                    'Name of a "template" to clone and customize. Example: `buildpack create-project --template venia-concept`'
+                    'Name of a "template" to clone and customize. Example: `buildpack create-project --template @magento/venia-concept`'
             },
             backendUrl: {
                 alias: 'b',
@@ -71,7 +71,9 @@ module.exports.handler = async function buildpackCli(argv) {
     const params = {
         ...argv,
         name: argv.name || argv.directory,
-        template: await ensurePackageRoot(argv.template)
+        template: await ensurePackageRoot(argv.template, {
+            installIfDownloaded: true
+        })
     };
     const { directory, name } = params;
     await fse.ensureDir(directory);
