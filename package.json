@@ -51,7 +51,7 @@
         "storybook:clarkie": "yarn clarkie run storybook",
         "validate-queries:clarkie": "yarn clarkie run validate-queries",
         "clarkie": "yarn workspace @clarkie/clarkie-concept",
-        "watch:clarkie:all": "node scripts/watch-all.js",
+        "watch:clarkie:all": "node scripts/watch-all-clarkie.js",
         "watch:clarkie": "yarn clarkie run watch"
     },
     "devDependencies": {
