@@ -5,7 +5,9 @@ import { Util } from '@magento/peregrine';
 import { Adapter } from '@clarkie/clarkie-drivers';
 import store from './store';
 import app from '@magento/peregrine/lib/store/actions/app';
-import App, { AppContextProvider } from '@magento/venia-ui/lib/components/App';
+import App, {
+    AppContextProvider
+} from '@clarkie/clarkie-ui/lib/components/App';
 import './index.css';
 
 const { BrowserPersistence } = Util;

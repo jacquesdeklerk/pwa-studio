@@ -1,0 +1,26 @@
+{
+    "name": "Clarkie",
+    "short_name": "Clarkie",
+    "start_url": "/",
+    "theme_color": "#2b2e43",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Clarkie online store",
+    "icons": [
+        {
+            "src": "/clarkie-static/icons/venia_circle_144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/clarkie-static/icons/venia_circle_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/clarkie-static/icons/venia_circle_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

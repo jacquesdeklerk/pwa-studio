@@ -42,6 +42,13 @@ module.exports = async env => {
                 graphqlQueries: true,
                 rootComponents: true,
                 upward: true
+            },
+            '@clarkie/clarkie-ui': {
+                cssModules: true,
+                esModules: true,
+                graphqlQueries: true,
+                rootComponents: true,
+                upward: true
             }
         },
         env
