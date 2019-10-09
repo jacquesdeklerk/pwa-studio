@@ -5,10 +5,10 @@
     ```
     git clone https://github.com/magento/pwa-studio
     ```
-    *Note*: Windows users will want to ensure that [shared drives](https://docs.docker.com/docker-for-windows/#shared-drives) are enabled.
-3. In the root of the repository, run 
+    _Note_: Windows users will want to ensure that [shared drives](https://docs.docker.com/docker-for-windows/#shared-drives) are enabled.
+3. In the root of the repository, run
     ```
-    docker/run-docker
+    docker/run-docker-clarkie
     ```
 4. Once the script completes, a locally running instance of pwa will be available at `https://pwa-docker.localhost`.
 
@@ -18,13 +18,13 @@ The domain is configurable. Just set `PWA_STUDIO_PUBLIC_PATH` key to the new dom
 
 ## Pass custom .env file configuration through cli args (optional)
 
-To use a custom .env file for configuration, pass it to the `run-docker` script like so: `docker/run-docker -e path-from-project-root`. This file will take the place of the default `.env.docker` file.
+To use a custom .env file for configuration, pass it to the `run-docker-clarkie` script like so: `docker/run-docker-clarkie -e path-from-project-root`. This file will take the place of the default `.env.docker` file.
 
 ## Service Workers and Hot Reloading
 
-Service workers are disabled by default when running the `docker/run-docker` script, but they can easily be turned on by changing the default value of `DEV_SERVER_SERVICE_WORKER_ENABLED=0` to `DEV_SERVER_SERVICE_WORKER_ENABLED=1` in `.env.docker`.
+Service workers are disabled by default when running the `docker/run-docker-clarkie` script, but they can easily be turned on by changing the default value of `DEV_SERVER_SERVICE_WORKER_ENABLED=0` to `DEV_SERVER_SERVICE_WORKER_ENABLED=1` in `.env.docker`.
 
-Hot reloading is enabled by default when running the `docker/run-docker` script and automatically refreshes the browser on changes made in the container as well as on the host machine, ie your local file system. 
+Hot reloading is enabled by default when running the `docker/run-docker-clarkie` script and automatically refreshes the browser on changes made in the container as well as on the host machine, ie your local file system.
 
 If service workers are enabled during development, then service worker caching will affect the hot reloading and will require a manual refresh after the cached assets have fully reloaded.
 

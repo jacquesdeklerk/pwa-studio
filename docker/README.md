@@ -1,18 +1,18 @@
 # Docker Directory
 
-This directory stores certificates for local SSL/TLS, created by running `run-docker` script, as well as configuration for docker environment setup.
+This directory stores certificates for local SSL/TLS, created by running `run-docker-clarkie` script, as well as configuration for docker environment setup.
 
-Run the `docker/run-docker` script from the root of the repository to create a container running PWA with a secure https protocol.
+Run the `docker/run-docker-clarkie` script from the root of the repository to create a container running PWA with a secure https protocol.
 
 This script will:
 
-* copy the `.env.docker` environment variables to `.env` to be easily consumable by `docker-compose`
-* add a custom domain, configured in `.env.docker`
-* generate a self-signed ssl/tls certificate and trust the certificate using `devcert` in the `makeHostAndCert.js` script
-* run `docker-compose build` to build the container network
-* run `docker-compose up` to start the container running PWA at the custom domain with https
+-   copy the `.env.docker` environment variables to `.env` to be easily consumable by `docker-compose`
+-   add a custom domain, configured in `.env.docker`
+-   generate a self-signed ssl/tls certificate and trust the certificate using `devcert` in the `makeHostAndCert.js` script
+-   run `docker-compose build` to build the container network
+-   run `docker-compose up` to start the container running PWA at the custom domain with https
 
-After `docker/run-docker` is executed from the root of the repository, the default configuration will have the PWA application running at `https://pwa-docker.localhost`.
+After `docker/run-docker-clarkie` is executed from the root of the repository, the default configuration will have the PWA application running at `https://pwa-docker.localhost`.
 
 ## Configure a custom domain
 
@@ -20,13 +20,13 @@ The domain is configurable. Just set the `DEV_SERVER_HOST` key to the new domain
 
 ## Pass custom .env file configuration through cli args (optional)
 
-To use a custom .env file for configuration, pass it to the `run-docker` script like so: `docker/run-docker -e path-from-project-root`. This file will take the place of the default `.env.docker` file.
+To use a custom .env file for configuration, pass it to the `run-docker-clarkie` script like so: `docker/run-docker-clarkie -e path-from-project-root`. This file will take the place of the default `.env.docker` file.
 
 ## Service Workers and Hot Reloading
 
-Service workers are disabled by default when running the `docker/run-docker` script, but they can easily be turned on by changing the default value of `DEV_SERVER_SERVICE_WORKER_ENABLED=0` to `DEV_SERVER_SERVICE_WORKER_ENABLED=1` in `.env.docker`.
+Service workers are disabled by default when running the `docker/run-docker-clarkie` script, but they can easily be turned on by changing the default value of `DEV_SERVER_SERVICE_WORKER_ENABLED=0` to `DEV_SERVER_SERVICE_WORKER_ENABLED=1` in `.env.docker`.
 
-Hot reloading is enabled by default when running the `docker/run-docker` script and automatically refreshes the browser on changes made in the container as well as on the host machine, ie your local file system. 
+Hot reloading is enabled by default when running the `docker/run-docker-clarkie` script and automatically refreshes the browser on changes made in the container as well as on the host machine, ie your local file system.
 
 If service workers are enabled during development, then service worker caching will affect the hot reloading and will require a manual refresh after the cached assets have fully reloaded.
 
