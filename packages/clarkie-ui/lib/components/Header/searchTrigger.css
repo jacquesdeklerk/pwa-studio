@@ -9,5 +9,10 @@
 
 .open {
     composes: root;
-    color: rgb(var(--venia-teal));
+    color: rgb(var(--clarkie-blue));
+}
+
+:focus {
+    color: rgb(var(--clarkie-copper));
+    outline: none;
 }

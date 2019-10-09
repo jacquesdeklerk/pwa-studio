@@ -1,9 +1,9 @@
 .root {
     composes: root from './tile.css';
-    background-color: rgb(var(--venia-swatch-bg));
+    background-color: rgb(var(--clarkie-swatch-bg));
     border-color: rgba(0, 0, 0, 0.1);
     color: white;
-    --venia-swatch-bg: var(--venia-grey);
+    --clarkie-swatch-bg: var(--clarkie-grey);
 }
 
 .root_selected {

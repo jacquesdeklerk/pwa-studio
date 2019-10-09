@@ -11,8 +11,8 @@
     padding: 0 1rem;
     transition-duration: 384ms;
     transition-property: background-color, color;
-    transition-timing-function: var(--venia-anim-standard);
-    --color: var(--venia-text);
+    transition-timing-function: var(--clarkie-anim-standard);
+    --color: var(--clarkie-blue);
 }
 
 .filled {
@@ -21,25 +21,25 @@
 }
 
 .root:hover {
-    --color: var(--venia-teal);
+    --color: var(--clarkie-copper);
 }
 
 .root:focus {
-    box-shadow: 0 0 0 2px rgb(var(--venia-teal-light)),
-        0 0 0.5rem 2px rgba(var(--venia-teal), 0.2);
+    box-shadow: 0 0 0 2px rgb(var(--clarkie-copper-light)),
+        0 0 0.5rem 2px rgba(var(--clarkie-copper), 0.2);
     outline: none;
     transition-duration: 128ms;
-    --color: var(--venia-teal);
+    --color: var(--clarkie-copper);
 }
 
 .root:active {
     transition-duration: 128ms;
-    --color: var(--venia-teal-dark);
+    --color: var(--clarkie-copper-dark);
 }
 
 .root:disabled {
     pointer-events: none;
-    --color: var(--venia-grey-dark);
+    --color: var(--clarkie-grey-dark);
 }
 
 .content {
@@ -56,7 +56,7 @@
 .root_lowPriority {
     composes: root;
     border-width: 0;
-    color: rgb(var(--venia-error));
+    color: rgb(var(--clarkie-error));
     text-decoration: underline;
 }
 

@@ -19,12 +19,12 @@
 }
 
 .fetchError {
-    background-color: rgb(var(--venia-warning-light));
-    color: rgb(var(--venia-warning-dark));
+    background-color: rgb(var(--clarkie-warning-light));
+    color: rgb(var(--clarkie-warning-dark));
 }
 
 .fetchingData {
-    color: rgb(--venia-grey);
+    color: rgb(--clarkie-grey);
 }
 
 .noResults {

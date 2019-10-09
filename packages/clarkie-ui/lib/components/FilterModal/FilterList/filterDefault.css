@@ -6,7 +6,7 @@
 
 .icon {
     background-color: white;
-    border: 1px solid rgb(var(--venia-text));
+    border: 1px solid rgb(var(--clarkie-text));
     width: 1rem;
     height: 1rem;
     display: inline-flex;
@@ -17,5 +17,5 @@
 .iconActive {
     composes: icon;
     color: white;
-    background-color: rgb(var(--venia-text));
+    background-color: rgb(var(--clarkie-text));
 }

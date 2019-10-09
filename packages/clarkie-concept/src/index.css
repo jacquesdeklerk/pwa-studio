@@ -3,29 +3,34 @@
 }
 
 :root {
-    --venia-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
-    --venia-anim-in: cubic-bezier(0, 0, 0.2, 1);
-    --venia-anim-out: cubic-bezier(0.4, 0, 1, 1);
-    --venia-anim-standard: cubic-bezier(0.4, 0, 0.2, 1);
-    --venia-background-color: 255, 255, 255;
-    --venia-border: 224, 224, 224;
-    --venia-error: 192, 18, 63;
-    --venia-error-alt: 255, 226, 234;
-    --venia-font: Muli, -apple-system, BlinkMacSystemFont, sans-serif;
-    --venia-grey: 246, 246, 246;
-    --venia-grey-dark: 209, 209, 209;
-    --venia-grey-darker: 112, 112, 112;
-    --venia-orange: 241, 99, 33;
-    --venia-teal: 0, 115, 120;
-    --venia-teal-alt: 224, 240, 241;
-    --venia-teal-dark: 0, 104, 108;
-    --venia-teal-light: 212, 243, 238;
-    --venia-text: 33, 33, 33;
-    --venia-text-alt: var(--venia-grey-darker);
-    --venia-text-hint: 158, 158, 158;
-    --venia-text-spot: 255, 99, 51;
-    --venia-warning-dark: 249, 93, 94;
-    --venia-warning-light: 254, 229, 232;
+    --clarkie-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
+    --clarkie-anim-in: cubic-bezier(0, 0, 0.2, 1);
+    --clarkie-anim-out: cubic-bezier(0.4, 0, 1, 1);
+    --clarkie-anim-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --clarkie-background-color: 255, 255, 255;
+    --clarkie-border: 224, 224, 224;
+    --clarkie-error: 192, 18, 63;
+    --clarkie-error-alt: 255, 226, 234;
+    --clarkie-font: Muli, -apple-system, BlinkMacSystemFont, sans-serif;
+    --clarkie-grey: 246, 246, 246;
+    --clarkie-grey-dark: 209, 209, 209;
+    --clarkie-grey-darker: 112, 112, 112;
+    --clarkie-orange: 241, 99, 33;
+    --clarkie-teal: 0, 115, 120;
+    --clarkie-teal-alt: 224, 240, 241;
+    --clarkie-teal-dark: 0, 104, 108;
+    --clarkie-teal-light: 212, 243, 238;
+    --clarkie-text: 33, 33, 33;
+    --clarkie-text-alt: var(--clarkie-grey-darker);
+    --clarkie-text-hint: 158, 158, 158;
+    --clarkie-text-spot: 255, 99, 51;
+    --clarkie-warning-dark: 249, 93, 94;
+    --clarkie-warning-light: 254, 229, 232;
+    --clarkie-blue: 43, 46, 67;
+    --clarkie-blue-light: 100, 103, 124;
+    --clarkie-copper: 175, 94, 19;
+    --clarkie-copper-dark: 104, 52, 4;
+    --clarkie-copper-light: 184, 115, 51;
 }
 
 html {
@@ -39,7 +44,7 @@ html {
 
 body {
     background-color: white;
-    color: rgb(var(--venia-text));
+    color: rgb(var(--clarkie-text));
     margin: 0;
     padding: 0;
 }
@@ -56,7 +61,7 @@ body,
 input,
 select,
 textarea {
-    font-family: var(--venia-font);
+    font-family: var(--clarkie-font);
 }
 
 h1,
@@ -104,7 +109,7 @@ button {
     background: none;
     border: 0;
     cursor: pointer;
-    font-family: var(--venia-font);
+    font-family: var(--clarkie-font);
     font-size: 100%;
     padding: 0;
     touch-action: manipulation;

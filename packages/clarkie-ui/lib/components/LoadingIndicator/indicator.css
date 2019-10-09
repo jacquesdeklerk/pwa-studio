@@ -21,7 +21,7 @@
 }
 
 .message {
-    color: rgb(var(--venia-text-alt));
+    color: rgb(var(--clarkie-text-alt));
     font-size: 1rem;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
@@ -38,7 +38,7 @@
 @keyframes pulse {
     0% {
         filter: grayscale(1);
-        transform: scale(0.75) rotate(-540deg);
+        transform: scale(0.75) rotate(0deg);
     }
     100% {
         filter: grayscale(0);

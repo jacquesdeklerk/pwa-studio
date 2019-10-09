@@ -12,7 +12,7 @@
 }
 
 .informationPrompt {
-    color: rgb(var(--venia-error));
+    color: rgb(var(--clarkie-error));
     text-transform: capitalize;
 }
 

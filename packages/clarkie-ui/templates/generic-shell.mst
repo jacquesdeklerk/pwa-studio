@@ -1,9 +1,9 @@
 {{> templates/open-document}}
     {{#model}}
-    <title>{{title}} - Venia</title>
+    <title>{{title}} - Clarkie</title>
     {{/model}}
     {{^model}}
-    <title>Venia</title>
+    <title>Clarkie</title>
     {{/model}}
   {{> templates/open-body }}
   {{> templates/default-initial-contents }}

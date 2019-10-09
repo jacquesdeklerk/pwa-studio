@@ -20,7 +20,7 @@ const CategoryTile = props => {
     // interpolation doesn't work inside `url()` for legacy reasons
     // so a custom property should wrap its value in `url()`
     const imageUrl = imagePath ? `url(${imagePath})` : 'none';
-    const imageWrapperStyle = { '--venia-image': imageUrl };
+    const imageWrapperStyle = { '--clarkie-image': imageUrl };
 
     const classes = mergeClasses(defaultClasses, props.classes);
 

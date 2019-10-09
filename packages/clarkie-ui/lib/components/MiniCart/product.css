@@ -12,8 +12,8 @@
 }
 
 .image {
-    background-color: rgb(var(--venia-grey));
-    border: solid 1px rgb(var(--venia-border));
+    background-color: rgb(var(--clarkie-grey));
+    border: solid 1px rgb(var(--clarkie-border));
     border-radius: 2px;
     grid-area: image;
     max-width: 80px;
@@ -41,7 +41,7 @@
 
 .quantityOperator {
     align-items: center;
-    color: rgb(var(--venia-text-alt));
+    color: rgb(var(--clarkie-text-alt));
     display: inline-flex;
     margin: 0 0.375rem;
 }
@@ -57,7 +57,7 @@
     right: -24px;
     top: -7px;
     bottom: -7px;
-    background-color: rgb(var(--venia-grey));
+    background-color: rgb(var(--clarkie-grey));
     opacity: 0.5;
     z-index: 2;
 }

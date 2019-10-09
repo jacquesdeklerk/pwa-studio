@@ -12,8 +12,8 @@ const Logo = props => {
             className={classes.logo}
             src={logo}
             height={height}
-            alt="Venia"
-            title="Venia"
+            alt="Clarkie"
+            title="Clarkie"
         />
     );
 };

@@ -12,7 +12,8 @@
         "packages/upward-spec",
         "packages/venia-concept",
         "packages/venia-ui",
-        "packages/clarkie-concept"
+        "packages/clarkie-concept",
+        "packages/clarkie-ui"
     ],
     "author": "Magento Commerce",
     "license": "SEE LICENSE IN LICENSE.txt",

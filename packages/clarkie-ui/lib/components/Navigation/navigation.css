@@ -2,12 +2,12 @@
 
 .enter {
     transition-duration: 384ms;
-    transition-timing-function: var(--venia-anim-in);
+    transition-timing-function: var(--clarkie-anim-in);
 }
 
 .exit {
     transition-duration: 192ms;
-    transition-timing-function: var(--venia-anim-out);
+    transition-timing-function: var(--clarkie-anim-out);
 }
 
 .hidden {
@@ -41,14 +41,14 @@
 
 .root_open {
     composes: root enter visible;
-    box-shadow: 1px 0 rgb(var(--venia-border));
+    box-shadow: 1px 0 rgb(var(--clarkie-border));
     transform: translate3d(0, 0, 0);
 }
 
 .header {
     align-content: center;
-    background-color: rgb(var(--venia-grey));
-    box-shadow: 0 1px rgb(var(--venia-border));
+    background-color: rgb(var(--clarkie-grey));
+    box-shadow: 0 1px rgb(var(--clarkie-border));
     display: grid;
     grid-auto-columns: 3.5rem;
     grid-auto-flow: column;
@@ -71,7 +71,7 @@
 }
 
 .footer {
-    box-shadow: 0 -1px rgb(var(--venia-border));
+    box-shadow: 0 -1px rgb(var(--clarkie-border));
 }
 
 .modal {

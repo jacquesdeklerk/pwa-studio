@@ -21,7 +21,7 @@
 
 .imagePlaceholder {
     composes: image;
-    background-color: rgb(var(--venia-grey));
+    background-color: rgb(var(--clarkie-grey));
 }
 
 .name,
@@ -54,11 +54,11 @@
 
 .name_pending {
     composes: name;
-    background-color: rgb(var(--venia-grey));
+    background-color: rgb(var(--clarkie-grey));
 }
 
 .price_pending {
     composes: price;
-    background-color: rgb(var(--venia-grey));
+    background-color: rgb(var(--clarkie-grey));
     width: 3rem;
 }

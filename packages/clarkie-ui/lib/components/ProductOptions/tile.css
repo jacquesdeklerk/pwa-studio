@@ -1,6 +1,6 @@
 .root {
     composes: root from '../clickable.css';
-    border: 1px solid rgb(var(--venia-text));
+    border: 1px solid rgb(var(--clarkie-text));
     border-radius: 2px;
     height: 3rem;
     margin-left: 1rem;
@@ -19,7 +19,7 @@
 
 .root_selected {
     composes: root;
-    background-color: rgb(var(--venia-text));
+    background-color: rgb(var(--clarkie-text));
     color: white;
 }
 .root_focused {

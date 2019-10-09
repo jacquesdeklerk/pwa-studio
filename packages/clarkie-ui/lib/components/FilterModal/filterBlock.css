@@ -1,10 +1,10 @@
 .root:first-child {
-    border-top: 2px solid rgb(var(--venia-border));
-    border-bottom: 2px solid rgb(var(--venia-border));
+    border-top: 2px solid rgb(var(--clarkie-border));
+    border-bottom: 2px solid rgb(var(--clarkie-border));
 }
 
 .root {
-    border-bottom: 2px solid rgb(var(--venia-border));
+    border-bottom: 2px solid rgb(var(--clarkie-border));
 }
 
 .layout {
